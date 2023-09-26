@@ -82,12 +82,15 @@ body h2{
 }
 .card p{
     visibility: hidden;
-    transition: height 1.5s linear;
+}
+.card:hover p{
+    transition: all 5s ease-in-out;
 }
 .card:hover p{
     visibility: visible;
     min-height: 30px;
     height: auto;
+
 }
 .card-text{
     height: 0px;

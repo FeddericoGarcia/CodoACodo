@@ -1,0 +1,133 @@
+/***** CONFIGURACION DE RAIZ ****/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+:root{
+    --color-primary: #333a40!important;
+    --color-footer: #1d3c4e!important;
+    --color-white: #F1F1F1!important;
+}
+
+*::selection{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/***** NAVBAR ****/
+
+@media (max-width: 990px){
+    .btn-buy:hover{
+        max-width: 110px!important;
+    }
+}
+
+header nav, .navbar-collapse{
+    background: var(--color-primary)!important;
+    padding: 0 auto;
+}
+header img{
+    width: 100px;
+}
+header span{
+    font-weight: 400;
+    font-size: 1em;
+}
+.navbar-items{
+    height: 80px;
+}
+.btn-buy{
+    color: #198754!important;
+    text-shadow: 0px 0px 1px #CCC7, 0px 0px 12px #000;
+}
+.btn-buy:hover{
+    color: var(--color-white)!important;
+    background-color: #198754;
+    border-radius: 10px;
+}
+
+
+/***** CAROUSEL ****/
+
+.carousel-item{
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: cover;
+    height: 37rem;
+    min-height: 95vh;
+}
+.carousel-item svg{
+    opacity: .4;
+    margin-left: 0;
+}
+.img-carousel1{
+    background-image: url(img/ba1-min.jpg);
+}
+.img-carousel2{
+    background-image: url(img/ba2-min.jpg);
+}
+.img-carousel3{
+    background-image: url(img/ba3-min.jpg);
+}
+
+
+/***** TITULOS ****/
+
+.div-title{
+    text-align: center;
+    font-size: 1rem!important;
+    font-weight: 400!important;
+    padding: .7em 0;
+}
+.div-title span{
+    display: block;
+    font-weight: 700;
+    font-size: 1.7em!important;
+}
+
+
+/***** CARDS ****/
+
+.cards{
+    gap:.7em;
+}
+.img-max-height{
+    max-height: 277px;
+} 
+
+
+/***** CARD-DIVISOR ****/
+
+.card-divisor .row{
+    background: var(--color-primary);
+}
+.card-divisor .card-body{
+    color: var(--color-white);
+}
+.card-d{
+    max-width: 52%;
+}
+@media (max-width: 1166px){
+    .img-fluid{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/***** FORMULARIO ****/
+
+.form{
+    width: 50%;;
+}
+
+/***** FOOTER ****/
+
+footer{
+    background: var(--color-footer);
+}
+footer div, footer a{
+    color: var(--color-white);
+}

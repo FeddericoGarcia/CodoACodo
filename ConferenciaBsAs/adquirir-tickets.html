@@ -50,33 +50,64 @@
 
     <main>
 
-      <section>
-        <div class="cards card-divisor">
-          <div class="card mb-3">
-            <div class="row g-0">
-              <div class="col-md-6">
-                <img src="img/honolulu-min.jpg" class="img-fluid" alt="Foto de la Playa en Honolulu">
+      <section class="container-fluid pt-5 d-flex justify-content-center">
+
+        <div class="row mt-5 g-4 col-lg-8 col-xl-7">
+
+          <div class="cards d-flex justify-content-center">
+
+            <div class="col">
+              <div class="card bg-danger border-danger mb-3 shadow m-2">
+                <div class="card-header text-white h4 p-3">Estudiante</div>
+                <div class="card-body rounded-bottom">
+                  <p>Tienes un descuento del</p>
+                  <h3 class="card-title">80%</h3>
+                  <small>
+                    <p class="card-text text-muted">* Presentar documentación</p>
+                  </small>
+                </div>
               </div>
-              <div class="col-md-6 card-d p-4">
-                <div class="card-body">
-                  <h3 class="card-title">Conferencia Bs As - Octubre / 2023</h3>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat molestias vitae unde facere voluptatem minus voluptates commodi corrupti tenetur! Pariatur qui enim animi sapiente sed error similique molestiae ipsum! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, excepturi deleniti harum facilis id, a illo assumenda officiis illum praesentium eos. Qui laborum ratione in hic ducimus debitis voluptatum aperiam.</p>
-                  <p><a class="btn btn-lg btn btn-outline-light" href="#">Conocé más</a></p> 
+            </div>
+  
+            <div class="col">
+              <div class="card bg-warning border-warning mb-3 shadow m-2">
+                <div class="card-header text-white h4 p-3">Trainee</div>
+                <div class="card-body rounded-bottom">
+                  <p>Tienes un descuento del</p>
+                  <h3 class="card-title">50%</h3>
+                  <small>
+                    <p class="card-text text-muted">* Presentar documentación</p>
+                  </small>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col">
+              <div class="card bg-primary border-primary mb-3 shadow m-2">
+                <div class="card-header text-white h4 p-3">Junior</div>
+                <div class="card-body rounded-bottom">
+                  <p>Tienes un descuento del</p>
+                  <h3 class="card-title">15%</h3>
+                  <small>
+                    <p class="card-text text-muted">* Presentar documentación</p>
+                  </small>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
+
       </section>
 
-      <section class="container"  id="form">
+      <section class="container-fluid"  id="form-tkt">
         <div class="row justify-content-center p-5">
           <div class="col-lg-8 col-xl-7">
             <div class="div-title">
               <h3>VENTA <span> VALOR DE TICKET $200</span></h3>
             </div>
             <form class="needs-validation" novalidate="">
-              <div class="row g-3">
+              <div class="row g-3 form-group">
                 <div class="col-md-6">
                   <label for="firstName" class="form-label">Nombre</label>
                   <input type="text" class="form-control" id="firstName" placeholder="Pepe, Rosalia ..." value="" required="">
@@ -103,16 +134,15 @@
     
                 <div class="col-md-6">
                   <label for="firstName" class="form-label">Cantidad</label>
-                  <input type="text" class="form-control" id="cantidadTicket" placeholder="Pepe, Rosalia ..." value="" required="">
+                  <input type="number" class="form-control" id="cantidadTicket" placeholder="0" value="" required="">
                   <div class="invalid-feedback">
                     No te olvides de completar los campos.
                   </div>
                 </div>
     
                 <div class="col-md-6">
-                  <label for="lastName" class="form-label">Categoría</label>
-                  <input type="text" class="form-control" id="categoriaTicket" placeholder="Gomez, Lopez ..." value="" required="">
-                  <select>
+                  <label for="categoriaTicket" class="form-label">Categoría</label>
+                  <select class="form-control" id="categoriaTicket">
                     <option>Seleccioná una opción</option>
                     <option>Estudiante</option>
                     <option>Trainee</option>
@@ -124,9 +154,23 @@
                   </div>
                 </div>
 
-                <button class="btn btn-success btn-lg col-6" type="delete">Borrar</button>
-                <button class="btn btn-success btn-lg col-6" type="submit">Resumen</button>
-                
+                <div class="col">
+                  <div class="alert alert-primary" role="alert">
+                    <div class="d-flex flex-row">
+                      Total a pagar: $ <span id="pagarTotal"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-6">
+                    <button class="w-100 btn btn-success btn-lg" type="delete">Borrar</button>
+                  </div>
+                  <div class="col-6">
+                    <button class="w-100 btn btn-success btn-lg" type="reset">Resumen</button>  
+                  </div>
+                </div>    
+              </div>            
             </form>
           </div>
         </div>

@@ -106,23 +106,15 @@ header span{
 }
 
 
+/***** CARDS ADQUIRIR TICKETS ****/
 
-/***** CARDS ****/
-
-.cards{
-    gap:.7em;
+.bg-danger, .bg-primary, .bg-warning{
+    text-align: center;
 }
-.img-max-height{
-    max-height: 277px;
-} 
-
-
-
-/***** FORMULARIO ****/
-
-.form{
-    width: 50%;;
+.bg-danger>.card-body, .bg-primary>.card-body, .bg-warning>.card-body{
+    background-color: #FFF!important;
 }
+
 
 /***** FOOTER ****/
 

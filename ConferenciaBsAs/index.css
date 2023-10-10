@@ -105,10 +105,8 @@ header span{
 .card-d a{
     font-size: .8em;
 }
-.img-divisor{
-    max-height: 80vh;
-    max-width: 90vw;
-    background-position: center;
+.img-fluid{
+    max-height: 100vh!important;
 }
 
 

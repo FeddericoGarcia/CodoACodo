@@ -92,18 +92,25 @@ header span{
 
 /***** CARD-DIVISOR ****/
 
-.card-divisor .row{
-    background: var(--color-primary);
+.card-divisor .card{
+    border: none!important;
 }
-.card-divisor .card-body{
+.card-d .card-body{
     color: var(--color-white);
 }
 .card-d{
     max-width: 52%;
+    background: var(--color-primary);
 }
 .card-d a{
     font-size: .8em;
 }
+.img-divisor{
+    max-height: 80vh;
+    max-width: 90vw;
+    background-position: center;
+}
+
 
 
 /***** CARDS ADQUIRIR TICKETS ****/

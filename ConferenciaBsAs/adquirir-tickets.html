@@ -27,7 +27,7 @@
               <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedConten">
                 <ul class="navbar-nav mb-2 mb-md-0">
                   <li class="nav-item">
-                    <a class="nav-link ms-2 active" aria-current="page" href="index.html">La conferencia</a>
+                    <a class="nav-link ms-2" aria-current="page" href="index.html">La conferencia</a>
                   </li>
                   <li class="nav-item ms-2">
                     <a class="nav-link" href="index.html#oradores">Los oradores</a>
@@ -126,7 +126,7 @@
     
                 <div class="col-12">
                   <label for="email" class="form-label">Correo</label>
-                  <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com">
+                  <input type="email" class="form-control" id="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" placeholder="ejemplo@gmail.com">
                   <div class="invalid-feedback">
                     No te olvides de completar los campos.
                   </div>
@@ -134,7 +134,7 @@
     
                 <div class="col-md-6">
                   <label for="firstName" class="form-label">Cantidad</label>
-                  <input type="number" class="form-control" id="cantidadTicket" placeholder="0" value="" required="">
+                  <input type="number" class="form-control" id="cantTicket" placeholder="0" value="" required="">
                   <div class="invalid-feedback">
                     No te olvides de completar los campos.
                   </div>
@@ -142,12 +142,12 @@
     
                 <div class="col-md-6">
                   <label for="categoriaTicket" class="form-label">Categoría</label>
-                  <select class="form-control" id="categoriaTicket">
-                    <option>Seleccioná una opción</option>
-                    <option>Estudiante</option>
-                    <option>Trainee</option>
-                    <option>Junior</option>
-                    <option>Sin categoría</option>
+                  <select class="form-control" id="categTicket">
+                    <option value="" selected>Seleccioná una opción</option>
+                    <option value="1">Estudiante</option>
+                    <option value="2">Trainee</option>
+                    <option value="3">Junior</option>
+                    <option value="4">Sin categoría</option>
                   </select>
                   <div class="invalid-feedback">
                     No te olvides de completar los campos.
@@ -162,12 +162,14 @@
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-6">
-                    <button class="w-100 btn btn-success btn-lg" type="delete">Borrar</button>
+                <div class="row ml-1">
+                  <div class="col-md-6">
+                    <button class="w-100 btn btn-success btn-lg" type="reset"
+                    id="btn_delete">Borrar</button>
                   </div>
-                  <div class="col-6">
-                    <button class="w-100 btn btn-success btn-lg" type="reset">Resumen</button>  
+                  <div class="col-md-6">
+                    <button class="w-100 btn btn-success btn-lg" type="button" 
+                    id="btn_resm">Resumen</button>  
                   </div>
                 </div>    
               </div>            
@@ -198,7 +200,7 @@
       </ul>
 
     </footer>
-
+    <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
